@@ -1,1 +1,1 @@
-# GAPP_CS520 - (Graduate Program Application)
+# CS520 - GAPP (Graduate Program Application)
