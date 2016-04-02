@@ -1,0 +1,81 @@
+package gapp.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "applications")
+public class Application implements Serializable {
+	
+private static final long serialVersionUID = 1L;
+	
+	@Id
+    @GeneratedValue
+    @Column(name = "id")
+    private Integer applicationId;
+	
+	
+	@OneToOne	
+	private DepartmentProgram program;
+	
+	@OneToOne
+	private ProgramTerm term;
+	
+	@ManyToOne
+	private User user;
+	
+	@OneToOne	
+	private Status status;
+
+	
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Integer getApplicationId() {
+		return applicationId;
+	}
+
+	public void setApplicationId(Integer applicationId) {
+		this.applicationId = applicationId;
+	}
+
+	public DepartmentProgram getProgram() {
+		return program;
+	}
+
+	public void setProgram(DepartmentProgram program) {
+		this.program = program;
+	}
+	
+	public ProgramTerm getTerm() {
+		return term;
+	}
+
+	public void setTerm(ProgramTerm term) {
+		this.term = term;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	
+}

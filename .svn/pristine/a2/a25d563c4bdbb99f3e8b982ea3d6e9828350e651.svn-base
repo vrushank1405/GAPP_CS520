@@ -1,0 +1,13 @@
+package gapp.model.dao;
+
+import gapp.model.AdditionalInfo;
+
+import java.util.List;
+
+public interface AdditionalInfoDao {
+	
+    AdditionalInfo getAdditionalInfo(Integer id);
+	
+	List<AdditionalInfo> getAdditionalInfoByDeptId(Integer deptId);
+
+}

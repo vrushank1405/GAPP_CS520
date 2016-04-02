@@ -1,0 +1,144 @@
+package gapp.model;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "students_detail")
+public class Student  implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+    @GeneratedValue
+    @Column(name = "id")
+    private Integer studentId;
+	
+	@OneToOne
+	private User user;
+	
+	
+	@Column(name = "student_cin", nullable = true)
+	private String studentCIN;
+	
+	@Column(name = "phone_number")
+	private String phoneNumber;
+	
+	private String gender;
+	
+	@Column(name = "date_of_birth")
+	private Date DOB;
+	
+	private String citizenship;
+	
+	private boolean isInternational;
+	
+	@Column(nullable = true)
+	private Integer toefl;	
+	
+	@Column(name = "gpa")
+	private double GPA;
+	
+	private String transcript;
+	
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	public Integer getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(Integer studentId) {
+		this.studentId = studentId;
+	}
+
+
+	public String getStudentCIN() {
+		return studentCIN;
+	}
+
+	public void setStudentCIN(String studentCIN) {
+		this.studentCIN = studentCIN;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public Date getDOB() {
+		return DOB;
+	}
+
+	public void setDOB(Date dOB) {
+		DOB = dOB;
+	}
+
+	public String getCitizenship() {
+		return citizenship;
+	}
+
+	public void setCitizenship(String citizenship) {
+		this.citizenship = citizenship;
+	}
+
+	public Integer getToefl() {
+		return toefl;
+	}
+
+	public void setToefl(Integer toefl) {
+		this.toefl = toefl;
+	}
+
+	public double getGPA() {
+		return GPA;
+	}
+
+	public void setGPA(double gPA) {
+		GPA = gPA;
+	}
+
+	public String getTranscript() {
+		return transcript;
+	}
+
+	public void setTranscript(String transcript) {
+		this.transcript = transcript;
+	}
+
+	public boolean isInternational() {
+		return isInternational;
+	}
+
+	public void setInternational(boolean isInternational) {
+		this.isInternational = isInternational;
+	}
+	
+	
+}

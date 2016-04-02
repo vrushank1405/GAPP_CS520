@@ -1,0 +1,77 @@
+package gapp.model.dao.jpa;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import gapp.model.Department;
+import gapp.model.DepartmentProgram;
+import gapp.model.dao.DepartmentProgramDao;
+
+@Repository
+public class DepartmentProgramDaoImpl implements DepartmentProgramDao {
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public DepartmentProgram getDeptProgram(Integer id) {
+		return entityManager.find(DepartmentProgram.class, id);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<DepartmentProgram> getDeptProgramByDeptId(Integer deptId) {
+		
+		return entityManager
+				.createQuery(
+						"from  DepartmentProgram dp where dept.departmentId = :Id and enabled = true")
+				.setParameter("Id", deptId).getResultList();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<DepartmentProgram> getDeptProgramByAjax(Integer deptId) {
+		 String query = "select dp.programId, dp.programName from DepartmentProgram dp "		            
+		            + "where dp.dept.departmentId = :Id and enabled = true";
+
+		  
+	    	return entityManager.createQuery( query ).setParameter("Id", deptId)
+		            .getResultList();	
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<DepartmentProgram> searchDepartmentProgramByDept(Integer deptId) {
+		String query = "select dp from DepartmentProgram dp "
+				+ "join fetch dp.dept d "
+				+ "where (d.departmentId = :id or -1=:id) and (dp.enabled = true)";
+
+		return entityManager.createQuery(query).setParameter("id", deptId)
+				.getResultList();
+	}
+
+	@Override
+	@Transactional
+	public void removeDepartmentProgram(Integer Id) {
+		String hql = "Update DepartmentProgram dp set dp.enabled = :enabled "  + 
+	             "Where dp.programId = :deptId";
+	Query query = entityManager.createQuery(hql);
+	query.setParameter("enabled", false);
+	query.setParameter("deptId", Id);
+	
+	int result = query.executeUpdate();
+	}
+	
+	@Override
+	@Transactional
+	public DepartmentProgram saveDepartmentProgram(DepartmentProgram deptProgram) {
+		return entityManager.merge(deptProgram);
+	}
+	
+}

@@ -1,0 +1,12 @@
+package gapp.model.dao;
+
+import gapp.model.Application;
+
+import java.util.List;
+
+public interface ApplicationDao {
+
+	 List<Application> getApplicationByDepartment(String deptName, String programTerm);
+	 
+	 List<Application> getApplicationForStudent(String emailId);
+}

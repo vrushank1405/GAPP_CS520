@@ -1,0 +1,14 @@
+package gapp.model.dao;
+
+import gapp.model.Application;
+import gapp.model.ApplicationStatusRecords;
+import gapp.model.DepartmentProgram;
+
+import java.util.List;
+
+public interface ApplicationStatusRecordsDao {
+
+	List<ApplicationStatusRecords> getApplicationStatusRecordsByAppId(Integer applicationId);
+	
+	ApplicationStatusRecords saveApplicationStatusRecords(ApplicationStatusRecords app);
+}

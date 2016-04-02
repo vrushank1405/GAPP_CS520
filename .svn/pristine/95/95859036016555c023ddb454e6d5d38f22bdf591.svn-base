@@ -1,0 +1,33 @@
+package gapp.model.dao.jpa;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+
+import gapp.model.StudentEducationInfo;
+import gapp.model.dao.StudentEducationalInfoDao;
+
+@Repository
+public class StudentEducationalInfoDaoImpl implements StudentEducationalInfoDao {
+
+	@PersistenceContext
+    private EntityManager entityManager;
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<StudentEducationInfo> getStudentEducationalInfo(Integer userId){
+		
+		String query = "select sei from StudentEducationInfo sei "
+	            + "join fetch sei.user "
+	            + "where sei.user.id = :id";
+
+	  
+    	return entityManager.createQuery( query ).setParameter("id", userId)
+	            .getResultList();
+
+	}
+	
+}

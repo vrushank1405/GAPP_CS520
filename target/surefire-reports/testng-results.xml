@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="2590" started-at="2016-03-07T21:43:06Z" finished-at="2016-03-07T21:43:09Z">
+    <groups>
+      <group name="DepartmentDaoTests">
+        <method signature="DepartmentDaoTest.getDepartments()[pri:0, instance:gapp.model.dao.DepartmentDaoTest@6ee52dcd]" name="getDepartments" class="gapp.model.dao.DepartmentDaoTest"/>
+      </group> <!-- DepartmentDaoTests -->
+      <group name="ApplicationDaoTests">
+        <method signature="ApplicationDaoTest.getApplicationByDepartment()[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" name="getApplicationByDepartment" class="gapp.model.dao.ApplicationDaoTest"/>
+        <method signature="ApplicationDaoTest.getApplicationForStudent()[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" name="getApplicationForStudent" class="gapp.model.dao.ApplicationDaoTest"/>
+      </group> <!-- ApplicationDaoTests -->
+    </groups>
+    <test name="Command line test" duration-ms="2590" started-at="2016-03-07T21:43:06Z" finished-at="2016-03-07T21:43:09Z">
+      <class name="gapp.model.dao.ApplicationDaoTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="springTestContextBeforeTestClass" is-config="true" duration-ms="16" started-at="2016-03-07T13:43:06Z" finished-at="2016-03-07T13:43:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method name="springTestContextPrepareTestInstance" test-instance-name="" signature="springTestContextPrepareTestInstance()[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" is-config="true" status="PASS" duration-ms="2180" finished-at="2016-03-07T13:43:09Z" started-at="2016-03-07T13:43:06Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="94" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void gapp.model.dao.ApplicationDaoTest.getApplicationByDepartment()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="getApplicationByDepartment()[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="getApplicationByDepartment" duration-ms="237" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getApplicationByDepartment -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="springTestContextAfterTestMethod" is-config="true" duration-ms="15" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void gapp.model.dao.ApplicationDaoTest.getApplicationByDepartment()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="getApplicationForStudent()[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="getApplicationForStudent" duration-ms="16" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getApplicationForStudent -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void gapp.model.dao.ApplicationDaoTest.getApplicationForStudent()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void gapp.model.dao.ApplicationDaoTest.getApplicationForStudent()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:gapp.model.dao.ApplicationDaoTest@704a52ec]" test-instance-name="" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- gapp.model.dao.ApplicationDaoTest -->
+      <class name="gapp.model.dao.DepartmentDaoTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:gapp.model.dao.DepartmentDaoTest@6ee52dcd]" test-instance-name="" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void gapp.model.dao.DepartmentDaoTest.getDepartments()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="getDepartments()[pri:0, instance:gapp.model.dao.DepartmentDaoTest@6ee52dcd]" test-instance-name="" name="getDepartments" duration-ms="16" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDepartments -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:gapp.model.dao.DepartmentDaoTest@6ee52dcd]" test-instance-name="" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method name="springTestContextPrepareTestInstance" test-instance-name="" signature="springTestContextPrepareTestInstance()[pri:0, instance:gapp.model.dao.DepartmentDaoTest@6ee52dcd]" is-config="true" status="PASS" duration-ms="0" finished-at="2016-03-07T13:43:09Z" started-at="2016-03-07T13:43:09Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:gapp.model.dao.DepartmentDaoTest@6ee52dcd]" test-instance-name="" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:gapp.model.dao.DepartmentDaoTest@6ee52dcd]" test-instance-name="" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-03-07T13:43:09Z" finished-at="2016-03-07T13:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void gapp.model.dao.DepartmentDaoTest.getDepartments()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+      </class> <!-- gapp.model.dao.DepartmentDaoTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

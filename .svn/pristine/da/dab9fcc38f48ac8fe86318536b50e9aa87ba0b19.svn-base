@@ -1,0 +1,32 @@
+package gapp.web.controller;
+
+import gapp.model.ApplicationStatusRecords;
+import gapp.model.dao.AdditionalInfoDao;
+import gapp.model.dao.AdditionalInfoRecordsDao;
+import gapp.model.dao.ApplicationStatusRecordsDao;
+import gapp.model.dao.DepartmentProgramDao;
+import gapp.model.dao.ProgramTermDao;
+import gapp.model.dao.StatusDao;
+import gapp.model.dao.DepartmentDao;
+import gapp.model.dao.StudentDetailDao;
+import gapp.model.dao.StudentEducationalInfoDao;
+import gapp.model.dao.UserDao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	private StudentDetailDao userDao;
+	
+	@RequestMapping("/users.html")
+	public String users(ModelMap models){
+		models.put("users", userDao.getStudentDetail(4));
+		return "users";
+	}
+
+}

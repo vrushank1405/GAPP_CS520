@@ -1,0 +1,11 @@
+package gapp.model.dao;
+
+import gapp.model.ProgramTerm;
+
+import java.util.List;
+
+public interface ProgramTermDao {
+	
+	List<ProgramTerm> getProgramTerm();
+
+}
